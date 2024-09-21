@@ -57,18 +57,45 @@ function displayOrderSummary() {
     const orderSummaryElement = document.getElementById('order-summary');
     if (!orderSummaryElement) return; // Exit if on a page without the summary section
 
-    let summaryHTML = '<ul>';
+    let summaryHTML = `
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Product Name</th>
+                    <th>Price ($)</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
     let totalPrice = 0;
 
     cart.forEach((item, index) => {
-        summaryHTML += `<li>${index + 1}. ${item.productName} - $${item.price}</li>`;
+        summaryHTML += `
+            <tr>
+                <td>${index + 1}</td>
+                <td>${item.productName}</td>
+                <td>${item.price}</td>
+            </tr>
+        `;
         totalPrice += item.price;
     });
 
-    summaryHTML += `<li><strong>Total: $${totalPrice}</strong></li>`;
-    summaryHTML += '</ul>';
+    summaryHTML += `
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"><strong>Total</strong></td>
+                    <td><strong>$${totalPrice.toFixed(2)}</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    `;
+
     orderSummaryElement.innerHTML = summaryHTML;
 }
+
 
 // Initialize cart count on load
 document.addEventListener('DOMContentLoaded', () => {
