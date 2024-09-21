@@ -49,15 +49,7 @@
 //     updateCartCount();
 // }
 
-// // Toggle mobile menu
-// function toggleMenu() {
-//     const mobileMenu = document.getElementById('mobileMenu');
-//     if (mobileMenu.style.display === 'block') {
-//         mobileMenu.style.display = 'none';
-//     } else {
-//         mobileMenu.style.display = 'block';
-//     }
-// }
+
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cartCount = cart.length;
@@ -100,7 +92,7 @@ function checkoutCart() {
     });
 
     // WhatsApp URL with encoded message
-    const phoneNumber = "1234567890"; // Replace with your WhatsApp number
+    const phoneNumber = "9145524298"; // Replace with your WhatsApp number
     const encodedMessage = encodeURIComponent(orderDetails);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
@@ -136,3 +128,52 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
     displayOrderSummary(); // Show order summary if on the cart page
 });
+
+// Toggle mobile menu
+function toggleMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenu.style.display === 'block') {
+        mobileMenu.style.display = 'none';
+    } else {
+        mobileMenu.style.display = 'block';
+    }
+}
+
+// Adding function for slideshow images
+
+let slideIndex = 0;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Show slides function
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    
+    // If the index exceeds the number of slides, reset to the first slide
+    if (n >= slides.length) {
+        slideIndex = 0;
+    }
+
+    // If the index is less than 0, set it to the last slide
+    if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    // Hide all slides
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Show the current slide
+    slides[slideIndex].style.display = "block";
+}
+
+// Auto-slide every 20 seconds
+setInterval(function() {
+    plusSlides(1);
+}, 20000); // 20 seconds
