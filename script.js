@@ -23,7 +23,7 @@ function showPopup(productName) {
 
     setTimeout(() => {
         popup.classList.remove('popup-show');
-    }, 2000);
+    }, 1000);
 }
 
 function checkoutCart() {
