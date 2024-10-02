@@ -10,13 +10,26 @@
     <!-- Menu Bar -->
     <header>
         <nav class="navbar">
-            <ul class="nav-left">
-                <li><a href="oversized.html">Oversized</a></li>
-                <li><a href="t-shirts.html">T-Shirts</a></li>
-                <li><a href="hoodies.html">Hoodies</a></li>
-                <li><a href="sweatshirts.html">Sweatshirts</a></li>
-                <li><a href="polos.html">Polos</a></li>
-            </ul>
+            <div class="menu-icon" onclick="toggleMenu()"> <!-- 3-line hamburger icon -->
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="oversized.html">Oversized</a></li>
+                    <li><a href="t-shirts.html">T-Shirts</a></li>
+                    <li><a href="hoodies.html">Hoodies</a></li>
+                    <li><a href="sweatshirts.html">Sweatshirts</a></li>
+                    <li><a href="polos.html">Polos</a></li>
+                </ul>
+                <br>
+                <div class="back-arrow" onclick="toggleMenu()">
+                    <!-- Left arrow inside a circle on the leftmost side -->
+                    <span class="arrow-circle">&#8592;</span>
+                </div>
+            </div>
             <ul class="nav-right">
                 <li><a href="#" onclick="checkoutCart()">Checkout Cart</a></li>
                 <li><a href="#">Track Order</a></li>
@@ -49,7 +62,7 @@
         <div class="footer-right">
             <h3>Contact Info</h3>
             <p>123 Fashion Street, New York, NY 10001</p>
-            <p>Email: yourstore@gmail.com</p>
+            <p>Email: itsahaan.clothing@gmail.com</p>
             <p>Phone: +1 234-567-890</p>
         </div>
     </footer>
