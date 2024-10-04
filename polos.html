@@ -15,6 +15,14 @@
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </div>
+            <ul class="nav-right">
+                <li>
+                    <a href="cart.html">
+                        <span class="cart-icon">&#128722;</span> <!-- Cart Icon -->
+                        <span id="cart-count">0</span> <!-- Cart Count -->
+                    </a>
+                </li>
+            </ul>
             <div class="mobile-menu" id="mobileMenu">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -30,38 +38,104 @@
                     <span class="arrow-circle">&#8592;</span>
                 </div>
             </div>
-            <ul class="nav-right">
-                <li><a href="#" onclick="checkoutCart()">Checkout Cart</a></li>
-                <li><a href="#">Track Order</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
         </nav>
     </header>
 
-    <!-- Body Content -->
-    <div class="catalog">
-        <h1>Find Your Polos Here</h1>
-        <p>Explore our exclusive range of Polos that combine style and comfort.</p>
+
+      <!-- Slideshow Section -->
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="images/oversized/slide1.png" style="width:100%" alt="Slide 1">
+        </div>
+
+        <div class="slides fade">
+            <img src="images/slide2.jpg" style="width:100%" alt="Slide 2">
+        </div>
+
+        <div class="slides fade">
+            <img src="images/slide3.jpg" style="width:100%" alt="Slide 3">
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <!-- Footer -->
-    <footer>
+   <!-- Product Catalog -->
+     <div class="catalog">
+        <h1>Find your polos here</h1>
+        <div class="product-grid">
+            <!-- Repeat the block below for 9 products -->
+            <div class="product-box">
+                <img src="images/product1.jpg" alt="Product 1">
+                <p class="price">$10</p>
+                <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img src="images/product4.jpg" alt="Product 2">
+                <p class="price">$20</p>
+                <button onclick="addToCart('Product 2', 20)">Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img src="images/product3.jpg" alt="Product 3">
+                <p class="price">$30</p>
+                <button onclick="addToCart('Product 3', 30)">Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img src="images/product1.jpg" alt="Product 1">
+                <p class="price">$10</p>
+                <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img src="images/product4.jpg" alt="Product 2">
+                <p class="price">$20</p>
+                <button onclick="addToCart('Product 2', 20)">Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img src="images/product3.jpg" alt="Product 3">
+                <p class="price">$30</p>
+                <button onclick="addToCart('Product 3', 30)">Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img src="images/product1.jpg" alt="Product 1">
+                <p class="price">$10</p>
+                <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img src="images/product4.jpg" alt="Product 2">
+                <p class="price">$20</p>
+                <button onclick="addToCart('Product 2', 20)">Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img src="images/product3.jpg" alt="Product 3">
+                <p class="price">$30</p>
+                <button onclick="addToCart('Product 3', 30)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+ 
+     <!-- Popup for Added to Cart Notification -->
+     <div id="popup" class="popup">
+        <span id="popup-message"></span>
+    </div>
+
+     <!-- Footer -->
+     <footer>
         <div class="footer-left">
             <h3>About Our Brand</h3>
-            <p>We are committed to providing the best fashion items for men, women, and kids.</p>
+            <p>We are committed to providing the best fashion items for men, women, and kids. Our mission is to bring style and comfort to everyone.</p>
         </div>
         <div class="footer-middle">
             <h3>Follow Us</h3>
             <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
+                <li><a href="https://www.instagram.com/its.a.haan/profilecard/?igsh=MmtybW12dGZoNWNj">Instagram</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">LinkedIn</a></li>
             </ul>
         </div>
         <div class="footer-right">
             <h3>Contact Info</h3>
-            <p>123 Fashion Street, New York, NY 10001</p>
+            <p>Surobhi Park , Nagras Road , Aundh , Pune .</p>
             <p>Email: itsahaan.clothing@gmail.com</p>
             <p>Phone: +1 234-567-890</p>
         </div>
