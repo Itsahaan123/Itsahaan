@@ -541,3 +541,46 @@ footer {
     font-size: 18px;
     text-align: center;
 }
+
+/* Track Order Icon Styling */
+.track-order-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    top: 70px; /* Adjust this to control the vertical position below the icon */
+    left: 93%;  /* Horizontally align the tooltip relative to the icon */
+    transform: translateX(-50%); /* Ensures the tooltip is centered horizontally */
+    z-index: 1000;
+    width: 120px;
+    white-space: nowrap;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Show tooltip when hovering over the icon */
+.track-order-wrapper:hover .tooltip {
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .tooltip {
+        padding: 4px;
+        width: 110px; /* Reduce width on small screens */
+        top: 70px; /* Adjust this to control the vertical position below the icon */
+        left: 73%;  /* Horizontally align the tooltip relative to the icon */
+        transform: translateX(-50%); /* Ensures the tooltip is centered horizontally */
+        z-index: 1000;
+    }
+}
