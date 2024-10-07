@@ -584,3 +584,21 @@ footer {
         z-index: 1000;
     }
 }
+.track-order-icon-img {
+    width: 45px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+}
+
+.mobile-menu ul li a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .mobile-menu ul li a:hover {
+    color: #f5f1f1;
+  }
+  
+  .mobile-menu ul li a:active {
+    color: #666;
+    text-decoration: none;
+  }
