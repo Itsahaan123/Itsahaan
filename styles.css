@@ -12,6 +12,7 @@ body {
 /* Menu Bar Styles */
 .navbar {
     display: flex;
+    text-align: center;
     justify-content: space-between;
     align-items: center;
     background-color: #ff4d4d; /* Red Color */
@@ -395,6 +396,9 @@ footer {
 
 /* Slideshow container */
 .slideshow-container {
+    margin: 50px 0;
+    width: 100%;
+    text-align: center;
     position: relative;
     max-width: 100%; /* Ensures the container doesn't exceed the screen size */
     margin: auto;
@@ -547,6 +551,7 @@ footer {
     cursor: pointer;
     position: relative;
     display: inline-block;
+    color: #fff;
 }
 
 /* Tooltip Styling */
@@ -601,3 +606,86 @@ footer {
     color: #666;
     text-decoration: none;
   }
+
+/* Common container for both slideshow and best sellers */
+.container {
+    max-width: 1100px; /* Reduce the max width of the overall container */
+    margin: 0 auto; /* Centers the content */
+    padding: 0 15px; /* Adds horizontal padding to create space on smaller screens */
+}
+
+/* Slideshow section */
+.slideshow {
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+/* Best Sellers section */
+.best-sellers {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.best-sellers h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Product container with max 3 items per row on large screens */
+.best-sellers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    gap: 30px; /* Increased gap between product cards */
+    max-width: 100%; /* Ensure it does not exceed the parent width */
+    margin: 0 auto; /* Centers the grid within the container */
+}
+
+/* Styling individual product cards */
+.product-card {
+    border: 5px solid #ddd;
+    border-radius: 20px;
+    width: 100%; /* Full width within grid */
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.product-info h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.product-info span {
+    display: block;
+    font-size: 1.25rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .best-sellers-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for small screens */
+        gap: 20px; /* Maintain a smaller gap on mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .best-sellers-container {
+        grid-template-columns: repeat(3, 1fr); /* Ensure 3 items in a row for large screens */
+        gap: 30px; /* Maintain the gap for larger screens */
+    }
+}
