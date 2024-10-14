@@ -396,13 +396,16 @@ footer {
 
 /* Slideshow container */
 .slideshow-container {
-    margin: 50px 0;
-    width: 100%;
+    width: 90%; /* Reducing width to create space on the sides */
+    margin-right: auto; /* Center align by setting both left and right margins to auto */
+    margin-left: auto;  /* Center align */
     text-align: center;
     position: relative;
     max-width: 100%; /* Ensures the container doesn't exceed the screen size */
-    margin: auto;
     overflow: hidden; /* Hides any content outside the container */
+    box-sizing: border-box; /* Ensures padding and margins are included in total width */
+    padding-left: 5%; /* Adds padding on the left */
+    padding-right: 5%; /* Adds padding on the right */
 }
 
 /* Hide the slides by default */
@@ -420,18 +423,26 @@ footer {
 
 /* Left and right navigation arrows */
 .prev, .next {
-    cursor: pointer;
     position: absolute;
-    top: 50%;
-    width: auto;
+    top: 50%; /* This ensures the buttons are vertically centered */
+    transform: translateY(-50%); /* Ensures that the button is exactly in the middle */
     padding: 16px;
-    margin-top: -22px;
+    cursor: pointer;
     color: white;
     font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background for better visibility */
+    border: none;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.prev {
+    left: 20px; /* Adjust the position of the left arrow */
+}
+
+.next {
+    right: 20px; /* Adjust the position of the right arrow */
 }
 
 /* Positioning of the arrows */
@@ -440,10 +451,10 @@ footer {
     background-color: rgba(0,0,0,0.8);
 }
 
-.next {
+/* .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-}
+} */
 
 /* Add a fading effect to the slides */
 .fade {
@@ -608,22 +619,21 @@ footer {
   }
 
 /* Common container for both slideshow and best sellers */
-.container {
-    max-width: 1100px; /* Reduce the max width of the overall container */
-    margin: 0 auto; /* Centers the content */
-    padding: 0 15px; /* Adds horizontal padding to create space on smaller screens */
-}
 
-/* Slideshow section */
-.slideshow {
-    max-width: 100%;
-    margin-bottom: 50px;
-}
 
 /* Best Sellers section */
 .best-sellers {
+    width: 90%; /* Reducing width to create space on the sides */
+    margin-right: auto; /* Center align by setting both left and right margins to auto */
+    margin-left: auto;  /* Center align */
     text-align: center;
-    margin: 50px 0;
+    position: relative;
+    max-width: 100%; /* Ensures the container doesn't exceed the screen size */
+    overflow: hidden; /* Hides any content outside the container */
+    box-sizing: border-box; /* Ensures padding and margins are included in total width */
+    padding-left: 5%; /* Adds padding on the left */
+    padding-right: 5%; 
+    padding-bottom: 5%;/* Adds padding on the right */
 }
 
 .best-sellers h2 {
@@ -636,7 +646,6 @@ footer {
 .best-sellers-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three items per row */
-    gap: 30px; /* Increased gap between product cards */
     max-width: 100%; /* Ensure it does not exceed the parent width */
     margin: 0 auto; /* Centers the grid within the container */
 }
@@ -644,9 +653,10 @@ footer {
 /* Styling individual product cards */
 .product-card {
     border: 5px solid #ddd;
-    border-radius: 20px;
-    width: 100%; /* Full width within grid */
+    border-radius: 5px;
+    width: 90%; /* Full width within grid */
     padding: 10px;
+    gap: 10px; 
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
